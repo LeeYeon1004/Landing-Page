@@ -1,0 +1,61 @@
+/* code những thành phần chung */
+/* lớp giả */
+:root{
+    --primary-color: #f68b1f;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --boder-color: #ccc;
+    --box-shadow: rgba(0,0,0,0.2);
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+/* upline các thuộc tính css lên tất cả các phần tử html đc nhúng trong file base */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: rgb(255, 251, 247);
+}
+html{
+    font-size: 62.5%; /* 10px */
+    /* line-height: 1.4rem; */
+    font-family: 'Montserrat',  sans-serif; /* chủng chữ k có chân */
+    box-sizing: border-box;
+    
+}
+.grid{
+    width: 1200px;
+    max-width: 100%; /* đối với những màn hình nhỏ hơn 1200px thì max-width sẽ đc lấy giá trị 100% màn hình trình duyệt */
+    margin: 0 auto;
+}
+.grid-full-width{
+    width: 100%;
+}
+.grid-row{
+    /* nằm cùng trên 1 hàng ngang và xuống dòng khi độ dài vượt quá limit */
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1; /* độ trong suốt */
+    }
+}
+ @keyframes growth {
+     /* lớn lên */
+     from{
+        transform: scale(var(--growth-from));
+     }
+     to{
+        transform: scale(var(--growth-to));
+     }
+ }
