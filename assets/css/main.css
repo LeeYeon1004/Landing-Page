@@ -1,3 +1,4 @@
+/* phần header */
 .header__container{
     height: 88px;
     width: 100%;
@@ -42,7 +43,6 @@
 }
 .header__menu--btn{
     text-decoration: none;
-    color: var(--text-color);
     cursor: pointer;
     border: none;
     font-size: 1.6rem;
@@ -56,11 +56,13 @@
     margin-left: 14px;
 }
 .header__link:hover{
-
     color: var(--primary-color);
 }
 
 /* Phần nội dung ở giữa */
+.body-package {
+    height: 440px;
+}
 .body__container{
     margin-top: 88px;
     margin-bottom: 40px;
@@ -71,6 +73,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeIn ease-in 0.3s;
 }
 .body__content{
     text-align: center;
@@ -163,9 +166,13 @@
     background-color: var(--white-color);
     padding-bottom: 20px;
 }
+.img__content-container {
+    margin: auto;
+    animation: fadeIn ease-in 0.3s;
+    visibility: visible;
+}
 .img__content{
    display: flex;
-   
    margin: 8px auto;
 }
 .img__content .img__content--black{
@@ -174,6 +181,10 @@
 .imgs{
     width: 126px;
     height: 58px;
+    transition: all 150ms linear 0s;
+}
+.imgs:hover {
+    transform: scale(1.08);
 }
 .img{
     width: 100%;

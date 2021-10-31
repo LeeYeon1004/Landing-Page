@@ -16,7 +16,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+    scroll-behavior: smooth;
+    font-family: 'Montserrat',  sans-serif; /* chủng chữ k có chân */
+    box-sizing: border-box;
 }
 body{
     background-color: rgb(255, 251, 247);
@@ -24,8 +26,7 @@ body{
 html{
     font-size: 62.5%; /* 10px */
     /* line-height: 1.4rem; */
-    font-family: 'Montserrat',  sans-serif; /* chủng chữ k có chân */
-    box-sizing: border-box;
+    
     
 }
 .grid{
@@ -45,9 +46,11 @@ html{
 @keyframes fadeIn{
     from{
         opacity: 0;
+        transform: translate(0, 20px);
     }
     to{
         opacity: 1; /* độ trong suốt */
+        transform: none;
     }
 }
  @keyframes growth {
